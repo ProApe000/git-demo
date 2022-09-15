@@ -1,1 +1,6 @@
 测试git rm --cache filename
+git add --patch 对修改选择性的分批提交
+git rebase --interactive some_once_commit 可以将多个提交压缩成一个提交
+git reset --merge ORIG_HEAD ORIG_HEAD记录一次危险的提交前的commit --merge 危险指定为merge 一般用于合并后回退到合并前的提交
+git checkout some_once_commit 切换本分支上某次提交
+git cheery-pick 565917e..1fb0ac6 将(565917e,1fb0ac6]提交(不同分支)merge过来 
