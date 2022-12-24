@@ -7,3 +7,5 @@ git cheery-pick 565917e..1fb0ac6 将(565917e,1fb0ac6]提交(不同分支)merge�
 git branch -a 查看所有的分支 本地和远程分支
 git branch -r 查看所有的远程分支
 git branch --oneline 以简短信息的方式列出近期的提交历史记录
+git fetch 获取更新的分支列表和所有远程分支的内容
+git push [远程仓库名] --delete [远程分支名]
