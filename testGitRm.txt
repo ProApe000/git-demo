@@ -9,3 +9,6 @@ git branch -r 查看所有的远程分支
 git branch --oneline 以简短信息的方式列出近期的提交历史记录
 git fetch 获取更新的分支列表和所有远程分支的内容
 git push [远程仓库名] --delete [远程分支名]
+git tag [标签名称] [某次提交]  给某次提交打标签
+git tag  列出所有标签
+git show [标签名] 显示打上标签名的某次提交的具体信息
