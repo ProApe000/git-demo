@@ -14,3 +14,4 @@ git tag  列出所有标签
 git show [标签名] 显示打上标签名的某次提交的具体信息
 git checkout --filename 舍弃工作目录中对一个文件的修改 修改的工作未被暂存
 git reset     舍弃工作目录中所有未保存的修改 文件已经暂存 但是没有被提交
+git commit --amend  更改最近一次提交的提交信息
