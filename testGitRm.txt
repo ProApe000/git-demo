@@ -1,9 +1,11 @@
 测试git rm --cache filename
 git add --patch 对修改选择性的分批提交
 git rebase --interactive some_once_commit 可以将多个提交压缩成一个提交
+git rebase -i [base_commit]
 git reset --merge ORIG_HEAD ORIG_HEAD记录一次危险的提交前的commit --merge 危险指定为merge 一般用于合并后回退到合并前的提交
 git checkout some_once_commit 切换本分支上某次提交
-git cheery-pick 565917e..1fb0ac6 将(565917e,1fb0ac6]提交(不同分支)merge过来 
+git cheery-pick 565917e..1fb0ac6 经试验 为闭合区间啊 将[565917e,1fb0ac6]提交(不同分支)merge过来 
+git cherry-pick [commit1] [commit2] 挑选多个提交对象
 git branch -a 查看所有的分支 本地和远程分支
 git branch -r 查看所有的远程分支
 git branch --oneline 以简短信息的方式列出近期的提交历史记录
