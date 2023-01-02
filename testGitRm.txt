@@ -1,7 +1,7 @@
 测试git rm --cache filename
 git add --patch 对修改选择性的分批提交
 git rebase --interactive some_once_commit 可以将多个提交压缩成一个提交
-git rebase -i [base_commit]
+git rebase -i [base_commit] 在变基的过程中 你可以执行add commit操作(编辑模式)
 git reset --merge ORIG_HEAD ORIG_HEAD记录一次危险的提交前的commit --merge 危险指定为merge 一般用于合并后回退到合并前的提交
 git checkout some_once_commit 切换本分支上某次提交
 git cheery-pick 565917e..1fb0ac6 经试验 为闭合区间啊 将[565917e,1fb0ac6]提交(不同分支)merge过来 
@@ -17,3 +17,12 @@ git show [标签名] 显示打上标签名的某次提交的具体信息
 git checkout --filename 舍弃工作目录中对一个文件的修改 修改的工作未被暂存
 git reset     舍弃工作目录中所有未保存的修改 文件已经暂存 但是没有被提交
 git commit --amend  更改最近一次提交的提交信息
+git merge-base [commit1] [commit2] 两个提交的LCA 合并时需要进行三路对比
+git merge-base --all 找出所有的best ancestor
+撤销共享分支中的合并 6.6.2
+想要还原的提交是连续的 revert命令可以接受单个提交 或是一系列提交
+git revert --no-commit [commit1]..[commit2] (commit1,commit2] 
+快进式合并比较繁琐 所以建议在每次merge的时候 使用非快进式合 git merge --no-ff 参数
+
+使用包含--contains参数的branch命令来查看包含某个提交的所有分支
+git branch --contains [commit]
