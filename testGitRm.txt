@@ -26,3 +26,5 @@ git revert --no-commit [commit1]..[commit2] (commit1,commit2]
 
 使用包含--contains参数的branch命令来查看包含某个提交的所有分支
 git branch --contains [commit]
+
+git push -u [branch]:[remote_branch] 将推送到和本地分支名称不一样的远程分支
