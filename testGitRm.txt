@@ -28,3 +28,44 @@ git revert --no-commit [commit1]..[commit2] (commit1,commit2]
 git branch --contains [commit]
 
 git push -u [branch]:[remote_branch] 将推送到和本地分支名称不一样的远程分支
+
+git log 命令 参考：https://blog.csdn.net/qq_32452623/article/details/79599503
+按照作者或者是提交者查找
+git log --author=<pattern> 
+git log --committer=<pattern>
+
+关于时间检索
+查找某个时间点之后
+git log --since=<date>
+git log --after=<date>
+
+查找某个时间点之前
+git log --before=<date>
+git log --until=<date>
+
+组合查找
+git log --since="2018.03.12" --until="2018.03.18"
+
+按照提交信息查找
+git log --grep=<info>
+
+按照修改的某个查找
+git log [filePath]
+
+按照修改内容查找
+
+查看某个字符串的变动历史提交
+git log -S<string>
+查看某符合某一个正则表达式内容的变动历史提交  
+git log -G<regex>
+
+git log -S"喜欢你" --oneine
+
+查看合并提交
+git log --merges
+
+查看非合并提交
+git log --no-merges
+
+查看发生合并冲突的文件
+git log --merge
