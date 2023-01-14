@@ -1,4 +1,4 @@
-测试git rm --cache filename
+测试git rm --cache filename ddd
 git add --patch 对修改选择性的分批提交
 git rebase --interactive some_once_commit 可以将多个提交压缩成一个提交
 git rebase -i [base_commit] 在变基的过程中 你可以执行add commit操作(编辑模式)
@@ -59,7 +59,7 @@ git log -S<string>
 查看某符合某一个正则表达式内容的变动历史提交  
 git log -G<regex>
 
-git log -S"喜欢你" --oneine
+git log -S"喜欢你" --oneline
 
 查看合并提交
 git log --merges
@@ -76,3 +76,11 @@ git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(
 给命令起别名
 git config --global alias.[custom-name] "[really-name]"
 git config --global alias.cm "commit -m"
+
+查看当前作者
+git config user.name
+git config user.email
+
+查找那一次代码提交引入了错误
+git bisect start [起点] [终点]
+https://www.ruanyifeng.com/blog/2018/12/git-bisect.html
