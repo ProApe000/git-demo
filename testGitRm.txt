@@ -69,3 +69,10 @@ git log --no-merges
 
 查看发生合并冲突的文件
 git log --merge
+
+自定义log历史查看
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+给命令起别名
+git config --global alias.[custom-name] "[really-name]"
+git config --global alias.cm "commit -m"
